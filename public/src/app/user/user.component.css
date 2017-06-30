@@ -1,0 +1,22 @@
+.container{
+    margin: auto;
+}
+hr{margin:20px;}
+fieldset{margin:auto; width: 700px;}
+.input-reg{margin:10px; line-height: 18px, }
+legend{font-size: 20px;margin: auto;}
+a{font-size: 20px}
+.btn{position: relative;left: 500px}
+.box-1{
+    margin: auto;
+    padding: 10px;
+    width: 30px;
+    height: auto;
+    font-size: 18px;
+    background-color: yellow;
+    border: .5px solid #000000;
+}
+.sub{
+    font-weight: bold;
+}
+.result{font-style: italic;}

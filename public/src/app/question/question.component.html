@@ -1,0 +1,21 @@
+<div class="container">
+    <a [routerLink]="['/home']">home</a> |
+    <a href="" (click)="logOut()">Logout</a>
+    <hr>
+
+    <fieldset>
+        <legend><h3>Add New Question</h3></legend>
+        <div class="">
+            <form (submit)="addQuestion()" #addQuestionForm='ngForm'>
+                <div class="input-reg">
+                    <textarea name="question" rows="3" cols="50" [(ngModel)] ="q.question" placeholder="Add Your Question here" required></textarea>
+                </div>
+                <div class="input-reg">
+                    <textarea name="description" rows="3" cols="50" [(ngModel)] ="q.description" placeholder="Description" required></textarea>
+                </div>
+                <button class="btn" [disabled]="!addQuestionForm.valid">Add a Question</button>
+            </form>
+        </div>
+    </fieldset>
+
+</div>

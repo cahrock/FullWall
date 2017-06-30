@@ -1,0 +1,22 @@
+<div class="container">
+    <a [routerLink]="['/home']">home</a>|
+    <a [routerLink]="['/answer', question._id]">Answer this question</a> |
+    <a href="" (click)="logOut()">Logout</a>
+    <hr>
+    <fieldset>
+        <legend>Detail questions</legend>
+        <h2>Question: {{question.question}}</h2>
+        <p>Description: {{question.description}}</p>
+        <hr>
+        <div *ngFor = "let answer of question.answers">
+              <p>Username : <strong>{{answer.user}}</strong></p>
+              <p><span class="sub">Answer:</span> <span class="result">{{answer.answer}}</span></p>
+              <p><span class="sub">Details:</span> <span class="result">{{answer.details}}</span> </p>
+
+              <p><span class="box-1">Likes: {{answer.likes}} </span><button class="btn" (click)="likes(answer._id)" >Like</button></p>
+
+        <hr>
+
+        </div>
+    </fieldset>
+</div>

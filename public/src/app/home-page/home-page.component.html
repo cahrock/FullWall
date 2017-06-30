@@ -1,0 +1,26 @@
+
+  {{title}}
+
+
+
+
+    <div class="container">
+        <p><span><h3>Hi, {{name}} </h3></span> | <a href="" (click)="logOut()">Logout</a></p> 
+        <hr>
+        <div class="">
+            <a [routerLink]="['/new_question']"><h3>Add a Question</h3></a>
+              <table>
+                <tr>
+                  <th>Question</th>
+                  <th>Answer</th>
+                  <th>Action</th>
+                </tr>
+                <tr *ngFor='let q of questions, let i = index'>
+                      <td>{{q.question}}</td>
+                      <td>{{q.answers.length}}</td>
+                      <td><a [routerLink]="['/user', q._id]">Show</a> | <a [routerLink]="['/answer', q._id]">Answer</a></td>
+                </tr>
+              </table>
+        </div>
+
+    </div>
