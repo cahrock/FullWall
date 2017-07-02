@@ -8,7 +8,7 @@
         <h2>Question: {{question.question}}</h2>
         <p>Description: {{question.description}}</p>
         <hr>
-        <div *ngFor = "let answer of question.answers">
+        <div *ngFor = "let answer of question.answers | shortDesc:likes">
               <p>Username : <strong>{{answer.user}}</strong></p>
               <p><span class="sub">Answer:</span> <span class="result">{{answer.answer}}</span></p>
               <p><span class="sub">Details:</span> <span class="result">{{answer.details}}</span> </p>

@@ -73,7 +73,6 @@ module.exports = {
         var id = req.params.id
         Question.findOne({_id:id})
         .populate("answers")
-        .sort('field -createdAt')
         .exec(function(err, data){
             if(err){
                 console.log("Error inside Controllers: show(id)");

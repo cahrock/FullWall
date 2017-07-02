@@ -12,6 +12,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { QuestionComponent } from './question/question.component';
 import { UserComponent } from './user/user.component';
 import { AnswerComponent } from './answer/answer.component';
+import { ShortDescPipe } from './user/short-desc.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AnswerComponent } from './answer/answer.component';
     HomePageComponent,
     QuestionComponent,
     UserComponent,
-    AnswerComponent
+    AnswerComponent,
+    ShortDescPipe
   ],
   imports: [
       BrowserModule,
